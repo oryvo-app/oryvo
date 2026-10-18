@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oryvo – Lecteur IPTV pour Android TV, Fire TV et Android | Télécharger l'APK</title>
-<meta name="description" content="Téléchargez Oryvo, le lecteur IPTV gratuit pour Android TV, Fire TV et smartphones Android : TV en direct avec guide, films, séries, replay. Code Downloader 5556972.">
+<meta name="description" content="Téléchargez Oryvo, le lecteur IPTV gratuit pour Android TV, Fire TV, smartphones Android et PC Windows : TV en direct avec guide, films, séries, replay. Code Downloader 5556972.">
 <link rel="canonical" href="https://oryvo-app.github.io/oryvo/">
 <meta name="theme-color" content="#0f1324">
 <link rel="icon" type="image/png" href="assets/favicon-64.png">
@@ -24,7 +24,7 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Oryvo",
-  "operatingSystem": "Android 7.0+",
+  "operatingSystem": "Android 7.0+, Windows 10+",
   "applicationCategory": "MultimediaApplication",
   "description": "Lecteur IPTV pour Android TV, Fire TV et smartphones Android. Compatible Xtream Codes et M3U.",
   "softwareVersion": "0.10.10",
@@ -90,6 +90,8 @@ a { color: inherit; }
 .btn:hover { background: var(--accent-2); transform: translateY(-1px); }
 .btn svg { width: 20px; height: 20px; flex: none; }
 .btn small { font-weight: 500; opacity: .8; font-size: 14px; }
+.btn-alt { background: var(--card-2); box-shadow: none; border: 1px solid var(--line); }
+.btn-alt:hover { background: var(--line); }
 
 /* Hero */
 .hero { position: relative; overflow: hidden; padding: 64px 0 56px; }
@@ -177,8 +179,7 @@ dialog.viewer button { border: 0; border-radius: 999px; width: 40px; height: 40p
 .feat p { margin: 0; color: var(--muted); font-size: 15px; }
 
 /* Install */
-.install { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-@media (max-width: 860px) { .install { grid-template-columns: 1fr; } }
+.install { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
 .box { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
 .box h3 { margin: 0 0 4px; font-size: 21px; display: flex; align-items: center; gap: 10px; }
 .box h3 svg { width: 24px; height: 24px; color: var(--accent); }
@@ -253,6 +254,7 @@ footer a { color: var(--muted); }
   <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
   <symbol id="i-tv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="m8 2 4 4 4-4M10 10.5v5l4-2.5-4-2.5Z"/></symbol>
+  <symbol id="i-pc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></symbol>
 </svg>
 
@@ -277,7 +279,7 @@ footer a { color: var(--muted); }
         <img src="assets/icon-256.png" alt="Icône Oryvo" width="88" height="88">
         <div>
           <h1>Oryvo</h1>
-          <p>Lecteur IPTV · Android TV, Fire TV et smartphones</p>
+          <p>Lecteur IPTV · Android TV, Fire TV, smartphones et Windows</p>
         </div>
       </div>
       <p class="lead">Regardez <strong>votre abonnement IPTV</strong> dans une application claire et rapide : TV en direct avec guide des programmes, films, séries et replay, pensée pour la télécommande.</p>
@@ -285,11 +287,14 @@ footer a { color: var(--muted); }
         <div><dt>Version</dt><dd data-version>0.10.10</dd></div>
         <div><dt>Taille</dt><dd data-size>94,4 Mo</dd></div>
         <div><dt>Mise à jour</dt><dd data-date>15 oct. 2026</dd></div>
-        <div><dt>Android</dt><dd>7.0 et +</dd></div>
+        <div><dt>Android / Windows</dt><dd>7+ / 10+</dd></div>
       </dl>
       <div class="cta">
         <a class="btn" href="https://github.com/oryvo-app/oryvo/releases/latest/download/Oryvo.apk">
           <svg><use href="#i-dl"/></svg> Télécharger l'APK <small data-size>94,4 Mo</small>
+        </a>
+        <a class="btn btn-alt" href="https://github.com/oryvo-app/oryvo/releases/latest/download/OryvoSetup.exe">
+          <svg><use href="#i-pc"/></svg> Pour Windows <small data-size-win>24,6 Mo</small>
         </a>
         <div class="code-chip">
           <span>Code Downloader</span><b>5556972</b>
@@ -347,7 +352,7 @@ footer a { color: var(--muted); }
   <div class="wrap">
     <p class="kicker">Installation</p>
     <h2>Installé en deux minutes</h2>
-    <p class="intro">La même application pour la TV et le téléphone. Pour mettre à jour, refaites simplement les mêmes étapes : la nouvelle version s'installe par-dessus et garde vos playlists et vos favoris.</p>
+    <p class="intro">La même application pour la TV, le téléphone et l'ordinateur. Pour mettre à jour, refaites simplement les mêmes étapes : la nouvelle version s'installe par-dessus et garde vos playlists et vos favoris.</p>
     <div class="install">
       <div class="box">
         <h3><svg><use href="#i-tv"/></svg>Android TV et Fire TV</h3>
@@ -369,6 +374,17 @@ footer a { color: var(--muted); }
           <li><b>Installez</b> <span>puis ouvrez Oryvo et ajoutez votre playlist.</span></li>
         </ol>
         <p style="margin:22px 0 0"><a class="btn" href="https://github.com/oryvo-app/oryvo/releases/latest/download/Oryvo.apk"><svg><use href="#i-dl"/></svg> Télécharger Oryvo.apk</a></p>
+      </div>
+      <div class="box">
+        <h3><svg><use href="#i-pc"/></svg>Ordinateur Windows</h3>
+        <p>Windows 10 ou 11 (64 bits).</p>
+        <ol class="steps">
+          <li><b>Téléchargez l'installateur</b> <span>avec le bouton ci-dessous (fichier <code>OryvoSetup.exe</code>).</span></li>
+          <li><b>Ouvrez le fichier</b> <span>Si Windows affiche « Windows a protégé votre ordinateur » : <kbd>Informations complémentaires</kbd> › <kbd>Exécuter quand même</kbd>.</span></li>
+          <li><b>Installez</b> <span><kbd>Suivant</kbd> › <kbd>Installer</kbd>. Aucun droit d'administrateur n'est demandé.</span></li>
+          <li><b>Lancez Oryvo</b> <span>depuis le menu Démarrer ou le bureau, puis ajoutez votre playlist.</span></li>
+        </ol>
+        <p style="margin:22px 0 0"><a class="btn" href="https://github.com/oryvo-app/oryvo/releases/latest/download/OryvoSetup.exe"><svg><use href="#i-dl"/></svg> Télécharger pour Windows</a></p>
       </div>
     </div>
   </div>
@@ -407,8 +423,8 @@ footer a { color: var(--muted); }
     <div class="faq">
       <details><summary>Oryvo est-il gratuit ?</summary><p>Oui. L'application est gratuite, sans publicité et sans compte à créer.</p></details>
       <details><summary>Oryvo fournit-il des chaînes ou des films ?</summary><p>Non. Oryvo est un lecteur : il n'inclut, n'héberge et ne vend aucune chaîne ni aucun contenu. Il lit l'abonnement que vous possédez déjà, avec les identifiants Xtream Codes ou le lien M3U fournis par votre fournisseur.</p></details>
-      <details><summary>Sur quels appareils fonctionne-t-il ?</summary><p>Sur Android 7.0 ou plus récent : boîtiers Android TV, téléviseurs Android TV / Google TV, Fire TV (Fire OS 6 ou plus récent), smartphones et tablettes Android.</p></details>
-      <details><summary>Comment mettre à jour Oryvo ?</summary><p>Refaites l'installation : code <b>5556972</b> dans Downloader, ou le bouton Télécharger sur cette page. Le lien donne toujours la dernière version, qui s'installe par-dessus l'ancienne en gardant vos playlists et vos favoris.</p></details>
+      <details><summary>Sur quels appareils fonctionne-t-il ?</summary><p>Sur Android 7.0 ou plus récent : boîtiers Android TV, téléviseurs Android TV / Google TV, Fire TV (Fire OS 6 ou plus récent), smartphones et tablettes Android, ainsi que sur les ordinateurs sous Windows 10 ou 11 (64 bits).</p></details>
+      <details><summary>Comment mettre à jour Oryvo ?</summary><p>Refaites l'installation : code <b>5556972</b> dans Downloader, ou le bouton Télécharger sur cette page. Sur Windows, téléchargez et lancez le nouvel installateur. Les liens donnent toujours la dernière version, qui s'installe par-dessus l'ancienne en gardant vos playlists et vos favoris.</p></details>
       <details><summary>« Application non installée » : que faire ?</summary><p>Vérifiez que l'installation d'applications inconnues est autorisée pour Downloader (ou pour votre navigateur), et qu'il reste assez d'espace libre (environ 250 Mo). Si une ancienne version d'Oryvo venant d'une autre source est installée, désinstallez-la d'abord.</p></details>
       <details><summary>Mes identifiants sont-ils en sécurité ?</summary><p>Ils sont enregistrés chiffrés sur votre appareil et ne sont envoyés qu'au serveur de votre fournisseur. Oryvo n'a pas de serveur à lui et ne collecte rien.</p></details>
     </div>
@@ -421,6 +437,7 @@ footer a { color: var(--muted); }
     <p class="intro" style="margin-inline:auto">Gratuit, léger en autorisations, et à jour en un code.</p>
     <div class="cta">
       <a class="btn" href="https://github.com/oryvo-app/oryvo/releases/latest/download/Oryvo.apk"><svg><use href="#i-dl"/></svg> Télécharger l'APK</a>
+      <a class="btn btn-alt" href="https://github.com/oryvo-app/oryvo/releases/latest/download/OryvoSetup.exe"><svg><use href="#i-pc"/></svg> Pour Windows</a>
       <div class="code-chip"><span>Code Downloader</span><b>5556972</b><button class="copy" type="button" data-copy="5556972">Copier</button></div>
     </div>
   </div>
@@ -511,6 +528,8 @@ footer a { color: var(--muted); }
         set('data-size', (apk.size / 1048576).toLocaleString('fr-FR', { maximumFractionDigits: 1 }) + ' Mo');
         if (apk.digest) set('data-hash', apk.digest.replace(/^sha256:/, ''));
       }
+      var win = (rel.assets || []).filter(function (a) { return a.name === 'OryvoSetup.exe'; })[0];
+      if (win) set('data-size-win', (win.size / 1048576).toLocaleString('fr-FR', { maximumFractionDigits: 1 }) + ' Mo');
       if (rel.body) {
         // Install steps are on this page already; show what changed.
         var news = rel.body.split(/\n## Installation/)[0];
